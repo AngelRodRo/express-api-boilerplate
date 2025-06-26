@@ -1,1 +1,9 @@
- 
+ echo "🔍 Running pre-commit checks..."
+
+echo "🧪 Running tests..."
+npm test
+
+echo "🔧 Running lint-staged (linter + prettier on staged files)..."
+npx lint-staged
+
+echo "✅ All pre-commit checks passed!"

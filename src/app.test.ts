@@ -5,7 +5,7 @@ describe('Express App', () => {
   describe('GET /health', () => {
     it('should return 200 and health status', async () => {
       const response = await request(app).get('/health');
-      
+
       expect(response.status).toBe(200);
       expect(response.body).toHaveProperty('status', 'OK');
       expect(response.body).toHaveProperty('timestamp');
@@ -19,7 +19,7 @@ describe('Express App', () => {
   describe('GET /', () => {
     it('should return 200 and API info', async () => {
       const response = await request(app).get('/');
-      
+
       expect(response.status).toBe(200);
       expect(response.body).toHaveProperty(
         'message',
@@ -34,10 +34,10 @@ describe('Express App', () => {
   describe('404 handler', () => {
     it('should return 404 for non-existent routes', async () => {
       const response = await request(app).get('/non-existent');
-      
+
       expect(response.status).toBe(404);
       expect(response.body).toHaveProperty('error', 'Not Found');
       expect(response.body).toHaveProperty('message');
     });
   });
-}); 
+});
