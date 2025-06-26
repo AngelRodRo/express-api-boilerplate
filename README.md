@@ -23,8 +23,8 @@ A modern Express.js API boilerplate with TypeScript, ESLint, Prettier, Jest, and
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd express-api-boilerplace
+git clone git@github.com:AngelRodRo/express-api-boilerplate.git
+cd express-api-boilerplate
 
 # Install dependencies
 npm install
